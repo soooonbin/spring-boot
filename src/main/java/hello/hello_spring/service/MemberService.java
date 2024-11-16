@@ -9,13 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
     //private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     // 회원 서비스 코드를 DI 가능하게 변경
     private final MemberRepository memberRepository;
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
